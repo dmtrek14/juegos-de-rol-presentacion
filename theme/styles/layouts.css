@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Germania+One&family=Lato:ital,wght@0,400;0,700;1,400&display=swap");
+
+:root {
+    --slidev-theme-primary: #353430;
+    --slidev-theme-primary-light: #496773;
+    --slidev-theme-font-header: "Germania One", serif;
+    --ttrpg-theme-map-bg-color: #fffae6;
+}
+
+.slidev-layout {
+    background-color: var(--ttrpg-theme-map-bg-color);
+    color: var(--slidev-theme-primary);
+
+    h1,
+    h2,
+    h3 {
+        font-family: var(--slidev-theme-font-header);
+    }
+
+    h1 {
+        color: var(--slidev-theme-primary);
+    }
+
+    h1 + p {
+        @apply -mt-2 opacity-50 mb-4;
+    }
+
+    p + h2,
+    ul + h2,
+    table + h2 {
+        @apply mt-10;
+    }
+
+    h1 {
+        @apply text-4xl mb-4 -ml-[0.05em];
+    }
+
+    h2 {
+        @apply text-3xl;
+    }
+
+    h3 {
+        @apply text-2xl;
+    }
+
+    h4 {
+        @apply text-xl;
+    }
+
+    font-family: "Lato", sans-serif;
+
+    h5 {
+        @apply text-base;
+    }
+
+    h6 {
+        @apply text-sm pt-1 uppercase tracking-widest font-500 -ml-[0.05em];
+    }
+
+    h6:not(.opacity-100) {
+        @apply opacity-40;
+    }
+
+    a:hover {
+        color: #fffae6;
+        border-style: none;
+    }
+}
+
+.slidev-layout.cover,
+.slidev-layout.intro {
+    @apply h-full grid;
+
+    h1 {
+        color: inherit;
+        @apply text-6xl leading-20;
+    }
+}
+
+.slidev-layout.fact {
+    @apply text-center grid h-full;
+    h1 {
+        @apply text-8xl font-700;
+    }
+    h1 + p {
+        @apply font-700 text-2xl;
+    }
+}
+
+.slidev-layout.statement {
+    @apply text-center grid h-full;
+
+    h1 {
+        @apply text-6xl font-700;
+    }
+}
+
+.slidev-layout.quote {
+    @apply grid h-full;
+
+    h1 + p {
+        @apply mt-2;
+    }
+}
+
+.slidev-layout.reversed,
+.slidev-layout.default.reversed {
+    background-color: var(--slidev-theme-primary);
+    color: var(--ttrpg-theme-map-bg-color);
+
+    h1 {
+        color: var(--ttrpg-theme-map-bg-color);
+    }
+}
+
+.slidev-layout.section {
+    h1 {
+        @apply text-6xl font-500 leading-20;
+    }
+}
+
+dl {
+    @apply flex flex-col gap-y-3;
+
+    div {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 0 1rem;
+        align-items: baseline;
+    }
+
+    dt {
+        font-family: var(--slidev-theme-font-header);
+        @apply text-xl;
+    }
+
+    dd {
+        @apply text-l opacity-80;
+    }
+}
